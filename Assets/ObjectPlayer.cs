@@ -42,11 +42,7 @@ public class ObjectPlayer : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.green;
         }
-
-        if (transform.position.y > 3 && !GetComponent<CheckCollision>().enabled)
-        {
-            Time.timeScale = 0f;
-        }
+        
     }
 
     private void FixedUpdate()
