@@ -33,14 +33,17 @@ public class ObjectPlayer : MonoBehaviour
         if (id == 1)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
+            GetComponent<Transform>().localScale = new Vector3(0.5f,0.5f,1);
         }
         else if(id == 2)
         {
             GetComponent<SpriteRenderer>().color = Color.blue;
+            GetComponent<Transform>().localScale = new Vector3(0.75f,0.75f,1);
         }
         else if(id == 3)
         {
             GetComponent<SpriteRenderer>().color = Color.green;
+            GetComponent<Transform>().localScale = new Vector3(1,1,1);
         }
         
     }
