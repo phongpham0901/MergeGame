@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     
     public GameObject objSpawn;
     private ObjectPlayer[] obj;
+    public int point = 0;
     void Start()
     {
         obj = FindObjectsOfType<ObjectPlayer>();
@@ -22,6 +23,9 @@ public class GameManager : MonoBehaviour
         
     }
 
- 
+    public void Increa(int type)
+    {
+        point+=type;
+    }
     
 }

@@ -1,10 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckCollision : MonoBehaviour
 {
-   
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         ObjectPlayer otherObjectPlayer = other.gameObject.GetComponent<ObjectPlayer>();
@@ -12,9 +20,10 @@ public class CheckCollision : MonoBehaviour
 
         if (otherObjectPlayer.id == GetComponent<ObjectPlayer>().id)
         {
-            SpawnGame();
             if (otherObjectPlayer.id < 3)
             {
+                gameManager.Increa(otherObjectPlayer.id);
+                SpawnGame();
                 Destroy(other.gameObject);
             }
         }

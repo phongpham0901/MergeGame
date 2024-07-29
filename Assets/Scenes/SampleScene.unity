@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objSpawn: {fileID: 5534600409454786290, guid: 6289a77f8b5a0f349842ed3958b8a1c3, type: 3}
+  point: 0
 --- !u!1 &161385704
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +692,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 53239581, guid: 75520be05dec18741805a5307ecf0ecc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
