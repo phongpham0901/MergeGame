@@ -7,6 +7,7 @@ public class GameInitializer : MonoBehaviour
 {
     private void Awake()
     {
-        throw new NotImplementedException();
+        Container.Register<IRotation, Rotation>();
+        Container.Register<ISpawnBall, SpawnBall>();
     }
 }

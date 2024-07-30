@@ -26,10 +26,12 @@ public class ObjectPlayer : MonoBehaviour
     {
         // Initialize the previous position to the current position
         previousPosition = transform.position;
+        GetComponent<Rigidbody2D>().velocity = -10 * transform.up;
     }
 
     private void Update()
     {
+        
         if (id == 1)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
@@ -50,6 +52,8 @@ public class ObjectPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
+        
         if (transform.position != previousPosition)
         {
             Debug.Log("The object is moving.");

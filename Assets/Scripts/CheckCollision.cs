@@ -9,6 +9,7 @@ public class CheckCollision : MonoBehaviour
 
     private void Start()
     {
+        if(gameManager == null) {return;}
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -22,7 +23,7 @@ public class CheckCollision : MonoBehaviour
         {
             if (otherObjectPlayer.id < 3)
             {
-                gameManager.Increa(otherObjectPlayer.id);
+                //gameManager.Increa(otherObjectPlayer.id);
                 SpawnGame();
                 Destroy(other.gameObject);
             }
