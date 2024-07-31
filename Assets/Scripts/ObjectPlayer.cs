@@ -8,13 +8,6 @@ public class ObjectPlayer : MonoBehaviour
 {
     public int id;
     private Vector3 previousPosition;
-
-    private void Awake()
-    {
-        // Initialize the 'id' using a method appropriate for Unity's lifecycle
-        id = GetRandomNumber();
-    }
-
     
     public int GetRandomNumber()
     {
@@ -24,6 +17,24 @@ public class ObjectPlayer : MonoBehaviour
     
     private void Start()
     {
+        /*
+        if (gameObject.tag == "1")
+        {
+            id = 1;
+            
+        }
+        else if(gameObject.tag == "2")
+        {
+            id = 2;
+        }
+        else if(gameObject.tag == "3")
+        {
+            id = 3;
+        }
+        */
+
+        id = int.Parse(gameObject.tag);
+        
         // Initialize the previous position to the current position
         previousPosition = transform.position;
         GetComponent<Rigidbody2D>().velocity = -10 * transform.up;

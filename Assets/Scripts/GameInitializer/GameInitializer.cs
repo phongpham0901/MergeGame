@@ -7,7 +7,10 @@ public class GameInitializer : MonoBehaviour
 {
     private void Awake()
     {
+        //Cannon
         Container.Register<IRotation, Rotation>();
         Container.Register<ISpawnBall, SpawnBall>();
+        Container.Register<IShapeCircle, ShapeCircle>();
+        
     }
 }
