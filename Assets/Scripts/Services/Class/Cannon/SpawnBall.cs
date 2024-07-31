@@ -15,7 +15,7 @@ public class SpawnBall : ISpawnBall
 
         for (int i = 0; i < Input.touchCount; i++)
         {
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            if (Input.GetTouch(i).phase == TouchPhase.Began && Input.GetTouch(i).position.y <= 1700)
             {
                 ball = UnityEngine.Object.Instantiate(gameObject, transform.position, transform.rotation) as GameObject;
                 

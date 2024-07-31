@@ -12,5 +12,10 @@ public class GameInitializer : MonoBehaviour
         Container.Register<ISpawnBall, SpawnBall>();
         Container.Register<IShapeCircle, ShapeCircle>();
         
+        //Ball
+        Container.Register<IMove, Move>();
+        Container.Register<ICheckMovement, CheckMovement>();
+        Container.Register<IShapeBall, ShapeBall>();
+        Container.Register<ICheckCollision, CheckCol>();
     }
 }

@@ -64,7 +64,7 @@ public class ObjectPlayer : MonoBehaviour
     private void FixedUpdate()
     {
         
-        
+        /*
         if (transform.position != previousPosition)
         {
             Debug.Log("The object is moving.");
@@ -73,7 +73,7 @@ public class ObjectPlayer : MonoBehaviour
         {
             Debug.Log("The object is not moving.");
         }
-        
+        */
         if (transform.position.y <= 3 && GetComponent<Rigidbody2D>().velocity.magnitude <= 0)
         {
             CheckCollision checkCollisionComponent = GetComponent<CheckCollision>();
@@ -99,6 +99,6 @@ public class ObjectPlayer : MonoBehaviour
                 checkCollisionComponent.enabled = true;
             }
         }
-        previousPosition = transform.position;
+        //previousPosition = transform.position;
     }
 }

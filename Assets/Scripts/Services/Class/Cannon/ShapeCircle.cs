@@ -25,7 +25,7 @@ public class ShapeCircle : IShapeCircle
     {
         for (int i = 0; i < Input.touchCount; i++)
         {
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            if (Input.GetTouch(i).phase == TouchPhase.Began && Input.GetTouch(i).position.y <= 1700)
             {
                 gameObject.tag = GetShape();
                 if (gameObject.tag == "1")
