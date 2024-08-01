@@ -5,5 +5,7 @@ using UnityEngine;
 public interface ICheckCollision
 {
     public void CheckColl(GameObject gameObject, Collision2D other);
+    public bool GetCheckColl(GameObject gameObject, Collision2D other);
     public void ChangeSize(GameObject gameObject);
+    
 }

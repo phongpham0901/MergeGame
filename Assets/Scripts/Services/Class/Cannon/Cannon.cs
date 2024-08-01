@@ -12,6 +12,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] private float speedRotate;
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject circle;
+    [SerializeField] private GameObject pool;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class Cannon : MonoBehaviour
     void Update()
     {
         _rotation.RotationCannon(transform, speedRotate);
-        _spawnBall.SpawnBalls(ball, _transform, circle);
+        _spawnBall.SpawnBalls(ball, _transform, circle, pool);
         _shapeCircle.SetShape(circle);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnBall : ISpawnBall
 {
-    public void SpawnBalls(GameObject gameObject, Transform transform, GameObject circle)
+    public void SpawnBalls(GameObject gameObject, Transform transform, GameObject circle, GameObject pool)
     {
         GameObject ball;
         if (Input.GetKeyUp(KeyCode.C))
@@ -17,7 +17,7 @@ public class SpawnBall : ISpawnBall
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began && Input.GetTouch(i).position.y <= 1700)
             {
-                ball = UnityEngine.Object.Instantiate(gameObject, transform.position, transform.rotation) as GameObject;
+                ball = UnityEngine.Object.Instantiate(gameObject, transform.position, transform.rotation, pool.transform) as GameObject;
                 
                 ball.tag = circle.tag;
 

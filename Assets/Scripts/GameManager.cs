@@ -4,28 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    
-    public GameObject objSpawn;
-    private ObjectPlayer[] obj;
-    public int point = 0;
+    public int point;
+    [SerializeField] TextMeshProUGUI score;
+
     void Start()
     {
-        obj = FindObjectsOfType<ObjectPlayer>();
     }
     
     // Update is called once per frame
     void Update()
     {
-        
-        
+        score.text = "Score: " + point;
     }
 
-    public void Increa(int type)
+    public void Increament(int type)
     {
-        point+=type;
+        point += type;
     }
-    
 }
