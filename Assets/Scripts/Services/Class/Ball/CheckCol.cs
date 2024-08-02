@@ -37,5 +37,4 @@ public class CheckCol : ICheckCollision
         gameObject.GetComponent<Ball>().id += 1;
         Debug.Log("Spawn");
     }
-    
 }

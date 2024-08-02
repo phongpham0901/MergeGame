@@ -5,4 +5,5 @@ using UnityEngine;
 public interface ICheckMovement
 {
     public void CheckMove(GameObject gameObject);
+
 }

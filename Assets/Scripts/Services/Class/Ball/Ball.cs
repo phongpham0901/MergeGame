@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     private IShapeBall _shapeBall;
     [SerializeField] private float speed;
     [SerializeField] public int id;
+
     
     private void Awake()
     {
