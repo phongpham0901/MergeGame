@@ -17,8 +17,6 @@ public class GameInitializer : MonoBehaviour
         Container.Register<ICheckMovement, CheckMovement>();
         Container.Register<IShapeBall, ShapeBall>();
         Container.Register<ICheckCollision, CheckCol>();
-        
-        //Laser
-        Container.Register<ICheckExit, CheckExit>();
+        Container.Register<ICheckGameOver, CheckGameOver>();
     }
 }

@@ -200,8 +200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23008491}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 2.1, y: 0.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.1, y: 0.0069999695, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1550994283}
@@ -1006,8 +1006,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082464706}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.1, y: 0.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.1, y: 0.007, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1550994283}
@@ -1638,15 +1638,35 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -5, y: 3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 4, y: 3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data: {fileID: 11400000, guid: 6d14ec7d6a386e74e8b9b85cff804132, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data: {fileID: 21300000, guid: 437d99edb3c16b04d994c688ecc2807f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data:
       e00: 1
       e01: 0
@@ -1665,7 +1685,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1883,8 +1903,16 @@ CompositeCollider2D:
         Y: 29531250
       - X: 49531248
         Y: 30000000
-      - X: 40000000
+      - X: 49843752
         Y: 30000000
+      - X: 50000000
+        Y: 30312500
+      - X: 50000000
+        Y: 39531248
+      - X: 49531248
+        Y: 40000000
+      - X: 40000000
+        Y: 40000000
       - X: 40000000
         Y: -70468752
       - X: 39531248
@@ -2017,8 +2045,16 @@ CompositeCollider2D:
         Y: 29531250
       - X: -40468752
         Y: 30000000
-      - X: -50000000
+      - X: -40156248
         Y: 30000000
+      - X: -40000000
+        Y: 30312500
+      - X: -40000000
+        Y: 39531248
+      - X: -40468752
+        Y: 40000000
+      - X: -50000000
+        Y: 40000000
       - X: -50000000
         Y: -100000000
       - X: -40156248
@@ -2247,8 +2283,12 @@ CompositeCollider2D:
       - {x: 4.9843826, y: 2.0000148}
       - {x: 5, y: 2.031256}
       - {x: 4.9999924, y: 2.9531326}
-      - {x: 4.953114, y: 3}
-      - {x: 4, y: 2.999971}
+      - {x: 4.9532123, y: 3}
+      - {x: 4.9843826, y: 3.0000148}
+      - {x: 5, y: 3.031256}
+      - {x: 4.9999924, y: 3.9531324}
+      - {x: 4.953114, y: 4}
+      - {x: 4, y: 3.999971}
       - {x: 3.9999385, y: -7.0468135}
       - {x: 3.953114, y: -7}
       - {x: 3, y: -7.0000296}
@@ -2314,8 +2354,12 @@ CompositeCollider2D:
       - {x: -4.0156174, y: 2.0000148}
       - {x: -4, y: 2.031256}
       - {x: -4.0000076, y: 2.9531326}
-      - {x: -4.046886, y: 3}
-      - {x: -5, y: 2.999971}
+      - {x: -4.046788, y: 3}
+      - {x: -4.0156174, y: 3.0000148}
+      - {x: -4, y: 3.031256}
+      - {x: -4.0000076, y: 3.9531324}
+      - {x: -4.046886, y: 4}
+      - {x: -5, y: 3.999971}
       - {x: -4.999971, y: -10}
     - - {x: -4, y: -8.046788}
       - {x: -4.046788, y: -8}
@@ -2490,9 +2534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1466833070}
   - component: {fileID: 1466833071}
-  - component: {fileID: 1466833073}
   - component: {fileID: 1466833072}
-  - component: {fileID: 1466833074}
   m_Layer: 0
   m_Name: laser
   m_TagString: Untagged
@@ -2508,8 +2550,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466833069}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.002, z: 0}
+  m_LocalScale: {x: 3.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1550994283}
@@ -2567,56 +2609,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1466833072
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466833069}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!70 &1466833073
-CapsuleCollider2D:
+--- !u!95 &1466833072
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466833069}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.20000005, y: 1.2800003}
-  m_Direction: 0
---- !u!114 &1466833074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466833069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce4987f939e5b4a4e82855a879d6b59c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laser: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 000c58cb8c56fe042a555cdc63e9216c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1550994282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1550994283}
+  - component: {fileID: 1550994284}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Finish
@@ -2651,6 +2665,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1550994284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550994282}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009333611, y: 0.037335157}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.826845, y: 0.589314}
+  m_EdgeRadius: 0
 --- !u!1 &1576391515
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,17 +9,17 @@ public class ShapeBall : IShapeBall
         if (id == 1)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            gameObject.GetComponent<Transform>().localScale = new Vector3(0.5f,0.5f,1);
+            gameObject.GetComponent<Transform>().localScale = new Vector3(1f,1f,1);
         }
         else if(id == 2)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
-            gameObject.GetComponent<Transform>().localScale = new Vector3(0.75f,0.75f,1);
+            gameObject.GetComponent<Transform>().localScale = new Vector3(2f,2f,1);
         }
         else if(id == 3)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-            gameObject.GetComponent<Transform>().localScale = new Vector3(1,1,1);
+            gameObject.GetComponent<Transform>().localScale = new Vector3(3,3,3);
         }
     }
 
