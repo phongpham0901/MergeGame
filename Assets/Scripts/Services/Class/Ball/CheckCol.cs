@@ -23,7 +23,7 @@ public class CheckCol : ICheckCollision
 
         if (ball.id == gameObject.GetComponent<Ball>().id)
         {
-            if (ball.id < 3)
+            if (ball.id < 10)
             {
                 return true;
             }

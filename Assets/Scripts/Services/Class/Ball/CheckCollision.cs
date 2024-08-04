@@ -21,7 +21,7 @@ public class CheckCollision : MonoBehaviour
         if (_checkCollision.GetCheckColl(gameObject, other))
         {
             Debug.Log("Increament");
-            gameManager.Increament(gameObject.GetComponent<Ball>().id);
+            gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
         }
         _checkCollision.CheckColl(gameObject, other);
         
