@@ -6,7 +6,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private IMove _move;
-    private ICheckMovement _checkMovement;
     private IShapeBall _shapeBall;
     private ICheckGameOver _checkGameOver;
     [SerializeField] private float speed;
@@ -19,7 +18,6 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         _move = Container.Resolve<IMove>();
-        _checkMovement = Container.Resolve<ICheckMovement>();
         _shapeBall = Container.Resolve<IShapeBall>();
         _checkGameOver = Container.Resolve<ICheckGameOver>();
     }
@@ -34,11 +32,7 @@ public class Ball : MonoBehaviour
     void Update()
     {
         _shapeBall.SetShapeBall(gameObject, id);
-    }
-
-    void FixedUpdate()
-    {
-        _checkMovement.CheckMove(gameObject);
+        GetComponent<CheckCollision>().enabled = true;
     }
     
     private void OnTriggerExit2D(Collider2D other)

@@ -13,7 +13,6 @@ public class CheckCollision : MonoBehaviour
         _checkCollision = Container.Resolve<ICheckCollision>();
         gameManager = FindObjectOfType<GameManager>();
     }
-    
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -24,6 +23,16 @@ public class CheckCollision : MonoBehaviour
             gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
         }
         _checkCollision.CheckColl(gameObject, other);
-        
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if(gameManager == null) {return;}
+        if (_checkCollision.GetCheckColl(gameObject, other))
+        {
+            Debug.Log("Stay Increa");
+            gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
+        }
+        _checkCollision.CheckColl(gameObject, other);
     }
 }

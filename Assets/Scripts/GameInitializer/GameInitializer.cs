@@ -14,7 +14,6 @@ public class GameInitializer : MonoBehaviour
         
         //Ball
         Container.Register<IMove, Move>();
-        Container.Register<ICheckMovement, CheckMovement>();
         Container.Register<IShapeBall, ShapeBall>();
         Container.Register<ICheckCollision, CheckCol>();
         Container.Register<ICheckGameOver, CheckGameOver>();
