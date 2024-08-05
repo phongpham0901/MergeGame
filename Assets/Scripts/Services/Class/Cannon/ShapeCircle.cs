@@ -65,7 +65,7 @@ public class ShapeCircle : IShapeCircle
 
     public string GetShape()
     {
-        return UnityEngine.Random.Range(1, 11).ToString();
+        return UnityEngine.Random.Range(1, 5).ToString();
     }
     
 }
