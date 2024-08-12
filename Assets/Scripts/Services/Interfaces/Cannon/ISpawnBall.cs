@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ISpawnBall
 {
-    public void SpawnBalls(GameObject gameObject,Transform transform, GameObject circle, GameObject pool);
+    public void SpawnBalls(GameObject gameObject,Transform transform, GameObject circle, GameObject pool, AudioManager audioManager);
 }

@@ -6,17 +6,20 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     
-    [Header("SFX")] 
-    [SerializeField] public AudioClip clipSFX;
-    [SerializeField] [Range(0f, 1f)] public float sfxVolume = 1f;
+    [Header("SFX1")] 
+    [SerializeField] public AudioClip clipSFX1;
+    [SerializeField] public AudioClip clipSFX2;
+    [SerializeField] [Range(0f, 1f)] public float sfxVolume = 0.5f;
     
     private static AudioManager instance;
     
     void Awake()
     {
         ManageInstance();
+        sfxVolume = PlayerPrefs.GetFloat("sfx");
+        GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("music");
     }
-    
+
     void ManageInstance()
     {
         if (instance != null)
@@ -32,10 +35,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX()
+    public void PlaySFX1()
     {
-        Debug.Log("clipSFX: " + clipSFX);
-        PlayClip(clipSFX, sfxVolume);
+        PlayClip(clipSFX1, sfxVolume);
+    }
+    
+    public void PlaySFX2()
+    {
+        PlayClip(clipSFX1, sfxVolume);
     }
 
     public void PlayClip(AudioClip clip, float volume)

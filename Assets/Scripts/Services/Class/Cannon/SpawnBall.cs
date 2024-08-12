@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnBall : ISpawnBall
 {
-    public void SpawnBalls(GameObject gameObject, Transform transform, GameObject circle, GameObject pool)
+    public void SpawnBalls(GameObject gameObject, Transform transform, GameObject circle, GameObject pool, AudioManager audioManager)
     {
         GameObject ball;
         if (Input.GetKeyUp(KeyCode.C))
@@ -22,7 +22,7 @@ public class SpawnBall : ISpawnBall
                     ball = UnityEngine.Object.Instantiate(gameObject, transform.position, transform.rotation, pool.transform) as GameObject;
                 
                     ball.tag = circle.tag;
-
+                    audioManager.PlaySFX2();
                 }
             }
         }

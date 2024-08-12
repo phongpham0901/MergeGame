@@ -13,13 +13,16 @@ public class Cannon : MonoBehaviour
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject circle;
     [SerializeField] private GameObject pool;
+    [SerializeField] private AudioManager audioManager;
 
     private void Awake()
     {
         _rotation = Container.Resolve<IRotation>();
         _spawnBall = Container.Resolve<ISpawnBall>();
         _shapeCircle = Container.Resolve<IShapeCircle>();
-        
+
+        audioManager = FindObjectOfType<AudioManager>();
+
     }
 
     void Start()
@@ -31,7 +34,7 @@ public class Cannon : MonoBehaviour
     void Update()
     {
         _rotation.RotationCannon(transform, speedRotate);
-        _spawnBall.SpawnBalls(ball, _transform, circle, pool);
+        _spawnBall.SpawnBalls(ball, _transform, circle, pool, audioManager);
         _shapeCircle.SetShape(circle);
     }
 }

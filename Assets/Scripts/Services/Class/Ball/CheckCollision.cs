@@ -23,7 +23,7 @@ public class CheckCollision : MonoBehaviour
         if (_checkCollision.GetCheckColl(gameObject, other))
         {
             Debug.Log("Increament");
-            audioManager.PlaySFX();
+            audioManager.PlaySFX1();
             gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
         }
         _checkCollision.CheckColl(gameObject, other);
@@ -35,7 +35,7 @@ public class CheckCollision : MonoBehaviour
         if (_checkCollision.GetCheckColl(gameObject, other))
         {
             Debug.Log("Stay Increa");
-            audioManager.PlaySFX();
+            audioManager.PlaySFX1();
             gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
         }
         _checkCollision.CheckColl(gameObject, other);
