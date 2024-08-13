@@ -8,6 +8,7 @@ public class CheckCollision : MonoBehaviour
     private GameManager gameManager;
     private AudioManager audioManager;
     private ICheckCollision _checkCollision;
+    [SerializeField] private GameObject effect;
     
 
     private void Awake()
@@ -23,6 +24,9 @@ public class CheckCollision : MonoBehaviour
         if (_checkCollision.GetCheckColl(gameObject, other))
         {
             Debug.Log("Increament");
+            GameObject effects = Instantiate(effect, transform.position, Quaternion.identity);
+            effects.transform.localScale = transform.localScale - new Vector3(0.1f, 0.1f, 0.1f);
+            Destroy(effects, 0.2f);
             audioManager.PlaySFX1();
             gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
         }
@@ -35,6 +39,9 @@ public class CheckCollision : MonoBehaviour
         if (_checkCollision.GetCheckColl(gameObject, other))
         {
             Debug.Log("Stay Increa");
+            GameObject effects = Instantiate(effect, transform.position, Quaternion.identity);
+            effects.transform.localScale = transform.localScale - new Vector3(0.1f, 0.1f, 0.1f);
+            Destroy(effects, 0.2f);
             audioManager.PlaySFX1();
             gameManager.Increament(gameObject.GetComponent<Ball>().id*25);
         }
