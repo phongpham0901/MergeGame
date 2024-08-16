@@ -5,14 +5,21 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int point;
+    private int point;
     private int highPoint;
-    [SerializeField] TextMeshProUGUI score;
+    [SerializeField] private TextMeshProUGUI score;
     [SerializeField] private TextMeshProUGUI highScoreT;
-    
+    [SerializeField] public bool isSetGameOver;
+
+    private void Awake()
+    {
+        isSetGameOver = true;
+    }
+
     void Start()
     {
         highPoint = PlayerPrefs.GetInt("highscore");
@@ -22,8 +29,29 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + point;
+        SetTextScore();
         SaveScore();
+        GameOver();
+        //PlayerPrefs.DeleteKey("highscore");
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteKey("score");
+
+        Debug.Log("Game is quitting, score key has been deleted.");
+    }
+    
+    private void SetTextScore()
+    {
+        if (SceneManager.GetActiveScene().name == "GamePlay")
+        {
+            score.text = "Score: " + point;
+        }
+        else
+        {
+            score.text = PlayerPrefs.GetInt("score").ToString();
+        }
     }
 
     public void Increament(int type)
@@ -36,6 +64,15 @@ public class GameManager : MonoBehaviour
         if (point > highPoint)
         {
             PlayerPrefs.SetInt("highscore", point);
+        }
+    }
+
+    public void GameOver()
+    {
+        if (Time.timeScale == 0f && isSetGameOver && SceneManager.GetActiveScene().name == "GamePlay")
+        {
+            PlayerPrefs.SetInt("score", point);
+            SceneManager.LoadScene("GameOver");
         }
     }
     

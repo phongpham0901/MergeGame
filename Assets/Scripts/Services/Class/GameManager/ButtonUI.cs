@@ -6,18 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class ButtonUI : MonoBehaviour
 {
+    
     [SerializeField] private GameObject canvasMenu;
-
+    private GameManager gameManager;
+    
+    private void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+    
     public void ButtonMenu()
     {
         canvasMenu.SetActive(true);
         Time.timeScale = 0f;
+        gameManager.isSetGameOver = false;
     }
     
     public void ButtonPlay()
     {
         Time.timeScale = 1f;
         canvasMenu.SetActive(false);
+        gameManager.isSetGameOver = true;
     }
     
     public void ButtonPlayAgain()
@@ -31,5 +40,12 @@ public class ButtonUI : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+    
+    public void ButtonPlayAgainGameOver()
+    {
+        Time.timeScale = 1f;
+        PlayerPrefs.DeleteKey("score");
+        SceneManager.LoadScene("GamePlay");
     }
 }
