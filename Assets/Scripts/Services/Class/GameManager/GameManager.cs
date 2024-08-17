@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "GamePlay")
         {
-            score.text = "Score: " + point;
+            score.text = point.ToString();
         }
         else
         {
