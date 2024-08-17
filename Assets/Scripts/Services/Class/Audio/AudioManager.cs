@@ -16,8 +16,8 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         ManageInstance();
-        sfxVolume = PlayerPrefs.GetFloat("sfx");
-        GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("music");
+        sfxVolume = 0.5f;
+        GetComponent<AudioSource>().volume = 0.5f;
     }
 
     void ManageInstance()

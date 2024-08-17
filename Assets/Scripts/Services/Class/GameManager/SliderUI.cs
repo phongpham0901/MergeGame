@@ -10,27 +10,19 @@ public class SliderUI : MonoBehaviour
     private AudioManager audioManager;
     [SerializeField] private GameObject sliderSFX;
     [SerializeField] private GameObject sliderMusic;
-
     private void Awake()
     {
-        sliderSFX.GetComponent<Slider>().value = PlayerPrefs.GetFloat("sfx");
-        
-        sliderMusic.GetComponent<Slider>().value = PlayerPrefs.GetFloat("music");
-
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
         audioManager = FindObjectOfType<AudioManager>();
+        sliderSFX.GetComponent<Slider>().value = PlayerPrefs.GetFloat("sfx", 0.5f);
+        sliderMusic.GetComponent<Slider>().value = PlayerPrefs.GetFloat("music", 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("hiiii");
         audioManager.sfxVolume = sliderSFX.GetComponent<Slider>().value;
         audioManager.GetComponent<AudioSource>().volume = sliderMusic.GetComponent<Slider>().value;
-        
         SaveValue();
     }
 

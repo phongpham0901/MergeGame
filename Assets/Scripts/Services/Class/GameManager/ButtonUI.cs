@@ -17,7 +17,7 @@ public class ButtonUI : MonoBehaviour
     
     public void ButtonMenu()
     {
-        canvasMenu.SetActive(true);
+        canvasMenu.GetComponent<Canvas>().enabled = true;
         Time.timeScale = 0f;
         gameManager.isSetGameOver = false;
     }
@@ -25,14 +25,14 @@ public class ButtonUI : MonoBehaviour
     public void ButtonPlay()
     {
         Time.timeScale = 1f;
-        canvasMenu.SetActive(false);
+        canvasMenu.GetComponent<Canvas>().enabled = false;
         gameManager.isSetGameOver = true;
     }
     
     public void ButtonPlayAgain()
     {
         Time.timeScale = 1f;
-        canvasMenu.SetActive(false);
+        canvasMenu.GetComponent<Canvas>().enabled = false;
         SceneManager.LoadScene("GamePlay");
     }
     
